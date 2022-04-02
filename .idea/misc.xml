@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circular_progress_bar.xml" value="0.1" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circular_progress_bar_beige.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_border.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_border_selected.xml" value="0.1" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_color_accent_bg.xml" value="0.1" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_exercise.xml" value="0.2" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
