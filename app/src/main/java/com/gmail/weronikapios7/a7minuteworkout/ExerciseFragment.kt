@@ -20,26 +20,40 @@ class ExerciseFragment : Fragment() {
     private var restTimer: CountDownTimer? = null
     private var totalRestTime = 10
 
+    private var exerciseList: ArrayList<ExerciseModel>? = null
+    private var currentExercisePosition = -1
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentExerciseBinding.inflate(inflater, container, false)
         setupRestView()
+        exerciseList = Constants.defaultExerciseList()
         return binding?.root
     }
 
     private fun setupRestView(){
+        binding?.flCountdownRest?.visibility = View.VISIBLE
+        binding?.tvTitle?.visibility = View.VISIBLE
+        binding?.tvExerciseName?.visibility = View.INVISIBLE
+        binding?.flCountdownExercise?.visibility = View.INVISIBLE
+        binding?.ivExercise?.visibility = View.INVISIBLE
         resetRestTimer()
         setRestProgressBar()
     }
 
     private fun setupExerciseView(){
         binding?.flCountdownRest?.visibility = View.INVISIBLE
-        binding?.tvTitle?.text = "Exercise Name"
+        binding?.tvTitle?.visibility = View.INVISIBLE
+        binding?.tvExerciseName?.visibility = View.VISIBLE
         binding?.flCountdownExercise?.visibility = View.VISIBLE
+        binding?.ivExercise?.visibility = View.VISIBLE
         resetExerciseTimer()
         setExerciseProgressBar()
+
+        binding?.ivExercise?.setImageResource(exerciseList!![currentExercisePosition].getImage())
+        binding?.tvExerciseName?.text = exerciseList!![currentExercisePosition].getName()
     }
 
     private fun setRestProgressBar(){
@@ -53,6 +67,7 @@ class ExerciseFragment : Fragment() {
             }
 
             override fun onFinish() {
+                currentExercisePosition += 1
                 setupExerciseView()
             }
 
@@ -71,7 +86,11 @@ class ExerciseFragment : Fragment() {
             }
 
             override fun onFinish() {
-                //TODO show rest view
+                if(currentExercisePosition < exerciseList?.size!! - 1){
+                    setupRestView()
+                }else{
+                    //TODO congratulations screen
+                }
             }
 
         }.start()

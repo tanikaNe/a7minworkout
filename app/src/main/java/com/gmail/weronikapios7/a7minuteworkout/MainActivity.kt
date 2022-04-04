@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.gmail.weronikapios7.a7minuteworkout.databinding.ActivityMainBinding
 import java.lang.reflect.Type
 
-//TODO use navigation component with fragments instead of activities
+//TODO work on the layout
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

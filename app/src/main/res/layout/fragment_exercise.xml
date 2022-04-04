@@ -70,6 +70,30 @@
         </LinearLayout>
     </FrameLayout>
 
+    <ImageView
+        android:id="@+id/iv_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_jumping_jacks"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_exercise_name"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_exercise"/>
+
+    <TextView
+        android:id="@+id/tv_exercise_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ExerciseName"
+        android:textColor="@color/accent_green"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_exercise"
+        tools:visibility="visible"/>
+
     <FrameLayout
         android:id="@+id/fl_countdown_exercise"
         android:layout_width="100dp"
@@ -81,7 +105,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_exercise">
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name">
 
         <ProgressBar
             android:id="@+id/progress_bar_exercise"
