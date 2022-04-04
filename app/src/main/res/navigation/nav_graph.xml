@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.gmail.weronikapios7.a7minuteworkout.ExerciseFragment"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.gmail.weronikapios7.a7minuteworkout.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/welcome_to_exercise"
+            app:destination="@id/exerciseFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+</navigation>

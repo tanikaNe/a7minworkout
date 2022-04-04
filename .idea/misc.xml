@@ -9,7 +9,9 @@
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_border_selected.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_color_accent_bg.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_exercise.xml" value="0.2" />
-        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_main.xml" value="0.17562724014336917" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_exercise.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_welcome.xml" value="0.1816123188405797" />
       </map>
     </option>
   </component>
