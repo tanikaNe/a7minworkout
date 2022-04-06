@@ -1,5 +1,7 @@
 package com.gmail.weronikapios7.a7minuteworkout
 
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
@@ -9,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.gmail.weronikapios7.a7minuteworkout.databinding.FragmentExerciseBinding
+import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -28,6 +31,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
     private var currentExercisePosition = -1
 
     private var tts: TextToSpeech? = null
+    private var player: MediaPlayer? = null
 
 
     override fun onCreateView(
@@ -43,6 +47,17 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
 
 
     private fun setupRestView(){
+
+        try {
+            val soundURI = Uri.parse(
+                "android.resource://com.gmail.weronikapios7.a7minuteworkout/"
+                        + R.raw.press_start)
+            player = MediaPlayer.create(context, soundURI)
+            player?.isLooping = false
+            player?.start()
+        }catch (e: Exception){
+            e.printStackTrace()
+        }
         resetRestTimer()
         setRestProgressBar()
         binding?.flCountdownRest?.visibility = View.VISIBLE
@@ -130,6 +145,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         }
     }
 
+
     override fun onDestroy() {
         super.onDestroy()
         resetRestTimer()
@@ -140,6 +156,10 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         if(tts != null){
             tts!!.stop()
             tts!!.shutdown()
+        }
+
+        if(player != null){
+            player!!.stop()
         }
     }
 
