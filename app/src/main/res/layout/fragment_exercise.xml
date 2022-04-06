@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExerciseActivity">
+    tools:context=".ExerciseFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_exercise"
@@ -69,6 +69,36 @@
                 android:text="10"/>
         </LinearLayout>
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_upcoming_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming Exercise"
+        android:textColor="@color/accent_green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_countdown_rest"
+        app:layout_constraintBottom_toTopOf="@id/tv_next_exercise"
+        tools:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_next_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/accent_green"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_upcoming_label"
+        tools:visibility="invisible"/>
+
 
     <ImageView
         android:id="@+id/iv_exercise"
