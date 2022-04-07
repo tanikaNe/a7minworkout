@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinishFragment">
+
+    <!-- <a href="https://www.flaticon.com/free-icons/trophy" title="trophy icons">Trophy icons created by Freepik - Flaticon</a> -->
+    <ImageView
+        android:id="@+id/iv_trophy"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="64dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/trophy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations!"
+        android:textColor="@color/accent_green"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_trophy" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You have successfully completed your workout. You deserved a rest! See you again tomorrow!"
+        android:textColor="@color/accent_green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_congratulations" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

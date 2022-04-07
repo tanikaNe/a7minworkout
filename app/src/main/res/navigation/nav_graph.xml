@@ -8,7 +8,11 @@
         android:id="@+id/exerciseFragment"
         android:name="com.gmail.weronikapios7.a7minuteworkout.ExerciseFragment"
         android:label="fragment_exercise"
-        tools:layout="@layout/fragment_exercise" />
+        tools:layout="@layout/fragment_exercise" >
+        <action
+            android:id="@+id/exercise_to_finish"
+            app:destination="@id/finishFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.gmail.weronikapios7.a7minuteworkout.WelcomeFragment"
@@ -18,5 +22,14 @@
             android:id="@+id/welcome_to_exercise"
             app:destination="@id/exerciseFragment"
             app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.gmail.weronikapios7.a7minuteworkout.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" >
+        <action
+            android:id="@+id/finish_to_welcome"
+            app:destination="@id/welcomeFragment" />
     </fragment>
 </navigation>

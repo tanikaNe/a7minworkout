@@ -10,6 +10,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.gmail.weronikapios7.a7minuteworkout.databinding.FragmentExerciseBinding
 import java.lang.Exception
 import java.util.*
@@ -33,6 +41,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
     private var tts: TextToSpeech? = null
     private var player: MediaPlayer? = null
 
+    private var exerciseAdapter: ExerciseStatusAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +51,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         exerciseList = Constants.defaultExerciseList()
         tts = TextToSpeech(context, this)
         setupRestView()
+        setupExerciseStatusRV()
         return binding?.root
     }
 
@@ -99,7 +109,9 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
             }
 
             override fun onFinish() {
-                currentExercisePosition += 1
+                currentExercisePosition++
+                exerciseList!![currentExercisePosition].setIsSelected(true)
+                exerciseAdapter!!.notifyDataSetChanged()
                 setupExerciseView()
             }
 
@@ -118,10 +130,13 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
             }
 
             override fun onFinish() {
+                exerciseList!![currentExercisePosition].setIsCompleted(true)
+                exerciseList!![currentExercisePosition].setIsSelected(false)
+                exerciseAdapter!!.notifyDataSetChanged()
                 if(currentExercisePosition < exerciseList?.size!! - 1){
                     setupRestView()
                 }else{
-                    //TODO congratulations screen
+                    findNavController().navigate(R.id.exercise_to_finish)
                 }
             }
 
@@ -177,6 +192,14 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
 
     private fun speakOut(text: String){
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
+    }
+
+    private fun setupExerciseStatusRV(){
+        binding?.rvExerciseStatus?.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        exerciseAdapter = ExerciseStatusAdapter(exerciseList!!)
+        binding?.rvExerciseStatus?.adapter = exerciseAdapter
     }
 
 }
