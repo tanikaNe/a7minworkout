@@ -20,6 +20,7 @@ class WelcomeFragment : Fragment() {
         binding = FragmentWelcomeBinding.inflate(inflater, container, false)
 
         binding?.flStart?.setOnClickListener { it.findNavController().navigate(R.id.welcome_to_exercise) }
+        binding?.flBMI?.setOnClickListener { it.findNavController().navigate(R.id.welcome_to_bmi) }
         return binding?.root
     }
 

@@ -11,11 +11,15 @@
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_color_accent_bg.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_color_accent_border.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/item_circular_color_beige_bg.xml" value="0.1" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/radio_group_tab_bg.xml" value="0.1" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/units_tab_selector.xml" value="0.1" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/units_tab_text_color_selector.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_exercise.xml" value="0.2" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_main.xml" value="0.17562724014336917" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_bmi.xml" value="0.264" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_exercise.xml" value="0.2" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_finish.xml" value="0.25" />
-        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_welcome.xml" value="0.264" />
+        <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/fragment_welcome.xml" value="0.1" />
         <entry key="..\:/Users/weron/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/item_exercise_status.xml" value="0.4" />
       </map>
     </option>

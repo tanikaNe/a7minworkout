@@ -22,6 +22,9 @@
             android:id="@+id/welcome_to_exercise"
             app:destination="@id/exerciseFragment"
             app:launchSingleTop="false" />
+        <action
+            android:id="@+id/welcome_to_bmi"
+            app:destination="@id/bmiFragment" />
     </fragment>
     <fragment
         android:id="@+id/finishFragment"
@@ -32,4 +35,9 @@
             android:id="@+id/finish_to_welcome"
             app:destination="@id/welcomeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/bmiFragment"
+        android:name="com.gmail.weronikapios7.a7minuteworkout.BmiFragment"
+        android:label="fragment_bmi"
+        tools:layout="@layout/fragment_bmi" />
 </navigation>
