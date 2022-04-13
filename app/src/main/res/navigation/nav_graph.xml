@@ -25,6 +25,9 @@
         <action
             android:id="@+id/welcome_to_bmi"
             app:destination="@id/bmiFragment" />
+        <action
+            android:id="@+id/welcome_to_history"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/finishFragment"
@@ -40,4 +43,9 @@
         android:name="com.gmail.weronikapios7.a7minuteworkout.BmiFragment"
         android:label="fragment_bmi"
         tools:layout="@layout/fragment_bmi" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.gmail.weronikapios7.a7minuteworkout.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

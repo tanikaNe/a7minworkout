@@ -21,6 +21,7 @@ class WelcomeFragment : Fragment() {
 
         binding?.flStart?.setOnClickListener { it.findNavController().navigate(R.id.welcome_to_exercise) }
         binding?.flBMI?.setOnClickListener { it.findNavController().navigate(R.id.welcome_to_bmi) }
+        binding?.flHistory?.setOnClickListener { it.findNavController().navigate(R.id.welcome_to_history) }
         return binding?.root
     }
 
